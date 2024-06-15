@@ -1,6 +1,6 @@
 <?php
-if (isset($_GET['fecha']) and ($_GET['fecha'] != null)) {
-  $fecha = $_GET['fecha'];
+if (isset($_POST['fecha']) and ($_POST['fecha'] != null)) {
+  $fecha = $_POST['fecha'];
 } else {
   $fecha = date('Y-m-d');
 }
