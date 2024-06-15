@@ -26,14 +26,14 @@ if (!isset($_SESSION['usuarioActual'])) {
   <?php include 'nav.php'; ?>
   <section>
     <?php
-    if (isset($_POST['fecha']) and ($_POST['fecha'] != null)) {
-      $fechaActual = $_POST['fecha'];
+    if (isset($_GET['fecha']) and ($_GET['fecha'] != null)) {
+      $fechaActual = $_GET['fecha'];
     } else {
       $fechaActual = date('Y-m-d');
     }
     ?>
     <div class="centeredContainer">
-      <form id="calendario" method="post">
+      <form id="calendario" method="get">
         <label for="fecha">Fecha:</label>
         <input type="date" id="fecha" name="fecha" value="<?php echo $fechaActual; ?>" min="<?php echo date('Y-m-d'); ?>">
         <input type="submit" id="submit" value="Actualizar">
