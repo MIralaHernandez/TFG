@@ -33,7 +33,7 @@ if (!isset($_SESSION['usuarioActual'])) {
     }
     ?>
     <div class="centeredContainer">
-      <form id="calendario">
+      <form id="calendario" method="post">
         <label for="fecha">Fecha:</label>
         <input type="date" id="fecha" name="fecha" value="<?php echo $fechaActual; ?>" min="<?php echo $fechaActual; ?>">
         <input type="submit" id="submit" value="Actualizar">
